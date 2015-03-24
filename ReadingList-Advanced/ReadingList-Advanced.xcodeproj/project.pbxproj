@@ -41,6 +41,7 @@
 		659BF44A1AC1C3EE000590B9 /* Whitman.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4321AC1C3EE000590B9 /* Whitman.png */; };
 		659BF44B1AC1C3EE000590B9 /* ModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4341AC1C3EE000590B9 /* ModelObject.m */; };
 		659BF44C1AC1C3EE000590B9 /* ReadingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4361AC1C3EE000590B9 /* ReadingList.m */; };
+		659BF4501AC1CE28000590B9 /* DataSourceInIB.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF44F1AC1CE28000590B9 /* DataSourceInIB.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		659BF4351AC1C3EE000590B9 /* ReadingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingList.h; sourceTree = "<group>"; };
 		659BF4361AC1C3EE000590B9 /* ReadingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingList.m; sourceTree = "<group>"; };
 		659BF44D1AC1C41B000590B9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		659BF44F1AC1CE28000590B9 /* DataSourceInIB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DataSourceInIB.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		659BF3CF1AC1C380000590B9 = {
 			isa = PBXGroup;
 			children = (
+				659BF44F1AC1CE28000590B9 /* DataSourceInIB.png */,
 				659BF44D1AC1C41B000590B9 /* README.md */,
 				659BF41B1AC1C3EE000590B9 /* ReadingListModel */,
 				659BF3DA1AC1C380000590B9 /* ReadingList-Advanced */,
@@ -331,6 +334,7 @@
 				659BF43B1AC1C3EE000590B9 /* Bacon.png in Resources */,
 				659BF43E1AC1C3EE000590B9 /* Dostoevsky.png in Resources */,
 				659BF43A1AC1C3EE000590B9 /* Austen.png in Resources */,
+				659BF4501AC1CE28000590B9 /* DataSourceInIB.png in Resources */,
 				659BF4431AC1C3EE000590B9 /* More.png in Resources */,
 				659BF3E91AC1C380000590B9 /* Images.xcassets in Resources */,
 				659BF4421AC1C3EE000590B9 /* Milne.png in Resources */,
@@ -539,6 +543,7 @@
 				659BF3FD1AC1C380000590B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		659BF3FE1AC1C380000590B9 /* Build configuration list for PBXNativeTarget "ReadingList-AdvancedTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +552,7 @@
 				659BF4001AC1C380000590B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
