@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yBt-sg-35n">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mX3-Nx-CVl">
+            <objects>
+                <navigationController id="yBt-sg-35n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k42-lG-eBc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XlH-H8-WOd" kind="relationship" relationship="rootViewController" id="9Gy-E5-av2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6a-Bi-mzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="171"/>
+        </scene>
+        <!--My Reading List-->
+        <scene sceneID="bCp-um-zcA">
+            <objects>
+                <tableViewController id="XlH-H8-WOd" customClass="RELReadingListController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uAc-lS-ITf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BookSummary" textLabel="aDF-TR-POV" detailTextLabel="S8S-bp-UeA" imageView="k6i-sO-QVO" rowHeight="52" style="IBUITableViewCellStyleSubtitle" id="Irv-4O-cSm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Irv-4O-cSm" id="I7a-wa-R8X">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="The Tempest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aDF-TR-POV">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1999  Shakespeare, William" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S8S-bp-UeA">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Shakespeare.png" id="k6i-sO-QVO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="GFA-6U-JC5" kind="push" identifier="ViewBook" id="oOL-RF-sdd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="DP2-ID-NDG" id="3OI-1l-yJQ"/>
+                            <outlet property="delegate" destination="XlH-H8-WOd" id="uXw-eS-Se1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Reading List" id="v4e-7z-ck3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ILv-Wl-hYa">
+                            <connections>
+                                <segue destination="dCW-SB-RBt" kind="modal" identifier="AddBook" id="w16-1D-AkO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dataSource" destination="DP2-ID-NDG" id="AjA-QD-ncM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udB-sl-6cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="DP2-ID-NDG" customClass="RELDataSource">
+                    <connections>
+                        <outlet property="tableView" destination="uAc-lS-ITf" id="F4S-4v-psz"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-242" y="171"/>
+        </scene>
+        <!--View Book-->
+        <scene sceneID="kGd-EF-Z1T">
+            <objects>
+                <tableViewController id="GFA-6U-JC5" customClass="RELViewBookController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="zTa-Lo-Z4t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="7Wk-u0-qDk">
+                            <rect key="frame" x="0.0" y="343" width="320" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shakespeare.png" id="bRJ-iP-nYq">
+                                    <rect key="frame" x="100" y="0.0" width="120" height="120"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Book Info" id="Dn8-uy-NLg">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="Rm1-IK-6m2" detailTextLabel="XQz-21-YJG" style="IBUITableViewCellStyleValue2" id="EED-Vs-laH">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EED-Vs-laH" id="tdV-xT-iYP">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rm1-IK-6m2">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="The Tempest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XQz-21-YJG">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="ctA-aJ-OPh" detailTextLabel="gcJ-uF-2Wj" style="IBUITableViewCellStyleValue2" id="C53-A9-f0V">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C53-A9-f0V" id="BLi-sa-32V">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Year" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ctA-aJ-OPh">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="1999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gcJ-uF-2Wj">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Author Info" id="bsx-SH-AIu">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="ta1-bp-x9v" detailTextLabel="ECD-rO-6b7" style="IBUITableViewCellStyleValue2" id="Ls0-ub-nvR">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ls0-ub-nvR" id="lDo-lr-105">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="First" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ta1-bp-x9v">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="William" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECD-rO-6b7">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="MXH-FE-8vr" detailTextLabel="ri5-yx-QpW" style="IBUITableViewCellStyleValue2" id="yam-WP-6fJ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yam-WP-6fJ" id="3ZX-5a-sXg">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Last" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MXH-FE-8vr">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Shakespeare" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ri5-yx-QpW">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="GFA-6U-JC5" id="GsQ-gm-lw8"/>
+                            <outlet property="delegate" destination="GFA-6U-JC5" id="rb6-hY-aKP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="View Book" id="Vfv-yp-ouV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Hk8-eG-SC4">
+                            <connections>
+                                <segue destination="l70-ot-e8H" kind="modal" id="XKa-Aj-B9p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorImageView" destination="bRJ-iP-nYq" id="HGM-I0-Rqy"/>
+                        <outlet property="firstNameLabel" destination="ECD-rO-6b7" id="rMJ-eG-m0Z"/>
+                        <outlet property="lastNameLabel" destination="ri5-yx-QpW" id="sLB-4O-XtM"/>
+                        <outlet property="titleLabel" destination="XQz-21-YJG" id="bUc-MB-vOE"/>
+                        <outlet property="yearLabel" destination="gcJ-uF-2Wj" id="Uju-nW-hdo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbf-j1-ABW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="171"/>
+        </scene>
+        <!--Add Book-->
+        <scene sceneID="vyd-TY-t9z">
+            <objects>
+                <tableViewController id="QFR-15-oba" customClass="RELAddBookController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="roE-DG-TJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="L9k-WU-JpQ">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="AgZ-xT-fKS">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AgZ-xT-fKS" id="3jT-PT-IOz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="The Tempest" minimumFontSize="17" clearButtonMode="whileEditing" id="6Ud-jK-nk1">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="dJ5-dt-sQE">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJ5-dt-sQE" id="hMM-hU-1GD">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1999" minimumFontSize="17" clearButtonMode="whileEditing" id="9Rf-x1-hsf">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="lZk-1a-o1I">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lZk-1a-o1I" id="cQg-YU-3Oa">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="William" minimumFontSize="17" clearButtonMode="whileEditing" id="NmY-F5-jSi">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="W7l-mo-9Zc">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W7l-mo-9Zc" id="EVG-oq-w58">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Shakespeare" minimumFontSize="17" clearButtonMode="whileEditing" id="gou-IO-oP5">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="QFR-15-oba" id="lgB-gn-JkX"/>
+                            <outlet property="delegate" destination="QFR-15-oba" id="hlQ-gw-vTF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Book" id="gzg-ny-JdA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="H0j-QI-5kp">
+                            <connections>
+                                <segue destination="PKQ-BL-1yG" kind="unwind" identifier="CancelAdding" unwindAction="cancelAddingBook:" id="thq-hJ-8mO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ld9-z5-enY">
+                            <connections>
+                                <segue destination="PKQ-BL-1yG" kind="unwind" identifier="DoneAdding" unwindAction="doneAddingBook:" id="huo-wU-4mH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firstNameField" destination="NmY-F5-jSi" id="pcq-lb-xs6"/>
+                        <outlet property="lastNameField" destination="gou-IO-oP5" id="b2u-jK-18k"/>
+                        <outlet property="titleField" destination="6Ud-jK-nk1" id="PTa-WW-fhm"/>
+                        <outlet property="yearField" destination="9Rf-x1-hsf" id="dPG-yk-LFC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywb-Z9-HT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PKQ-BL-1yG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="883"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="80B-yo-USI">
+            <objects>
+                <navigationController id="dCW-SB-RBt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wqM-eM-9Ns">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QFR-15-oba" kind="relationship" relationship="rootViewController" id="WhE-Q3-lx7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8Q-9P-zeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="883"/>
+        </scene>
+        <!--Edit Book-->
+        <scene sceneID="jur-mZ-QDQ">
+            <objects>
+                <tableViewController id="of0-wL-QvL" customClass="RELEditBookController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ye0-R6-liA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="V5s-TV-pfA">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="VcI-gu-0EF">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VcI-gu-0EF" id="DzR-uK-hVN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="The Tempest" minimumFontSize="17" clearButtonMode="whileEditing" id="Kyk-z3-rev">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="RsV-ww-4Hf">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RsV-ww-4Hf" id="fGi-tE-vns">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1999" minimumFontSize="17" clearButtonMode="whileEditing" id="JN2-cT-Zlw">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Lca-ym-NZi">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lca-ym-NZi" id="w2M-cL-b1U">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="William" minimumFontSize="17" clearButtonMode="whileEditing" id="kb8-Vy-eOE">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="zbJ-jE-keb">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbJ-jE-keb" id="jOi-Gf-zL8">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Shakespeare" minimumFontSize="17" clearButtonMode="whileEditing" id="0hA-eS-0n3">
+                                                    <rect key="frame" x="20" y="8" width="280" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="of0-wL-QvL" id="YsI-he-F8C"/>
+                            <outlet property="delegate" destination="of0-wL-QvL" id="qZ9-e2-zQ2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Edit Book" id="bTT-LB-xkD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="68H-dt-2pZ">
+                            <connections>
+                                <segue destination="i89-uS-mn7" kind="unwind" identifier="CancelEditing" unwindAction="cancelEditingBook:" id="NPH-az-y0k"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="asb-xb-10t">
+                            <connections>
+                                <segue destination="i89-uS-mn7" kind="unwind" identifier="DoneEditing" unwindAction="doneEditingBook:" id="SUn-rU-1Ak"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firstNameField" destination="kb8-Vy-eOE" id="c80-kI-gll"/>
+                        <outlet property="lastNameField" destination="0hA-eS-0n3" id="us6-Tb-Sjv"/>
+                        <outlet property="titleField" destination="Kyk-z3-rev" id="NdD-Wp-lAv"/>
+                        <outlet property="yearField" destination="JN2-cT-Zlw" id="AEd-zf-gsm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esj-Zn-NAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="i89-uS-mn7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="171"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OIi-sv-Tms">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l70-ot-e8H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="869-Ym-l4g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="of0-wL-QvL" kind="relationship" relationship="rootViewController" id="iAF-4T-qZI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KF3-EW-bBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Shakespeare.png" width="155" height="153"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

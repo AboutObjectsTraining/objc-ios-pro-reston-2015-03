@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		659BF3DE1AC1C380000590B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF3DD1AC1C380000590B9 /* main.m */; };
+		659BF3E91AC1C380000590B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659BF3E81AC1C380000590B9 /* Images.xcassets */; };
+		659BF3F81AC1C380000590B9 /* ReadingList_AdvancedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF3F71AC1C380000590B9 /* ReadingList_AdvancedTests.m */; };
+		659BF4121AC1C3CB000590B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4021AC1C3CB000590B9 /* AppDelegate.m */; };
+		659BF4131AC1C3CB000590B9 /* RELReadingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4041AC1C3CB000590B9 /* RELReadingListController.m */; };
+		659BF4141AC1C3CB000590B9 /* RELViewBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4061AC1C3CB000590B9 /* RELViewBookController.m */; };
+		659BF4151AC1C3CB000590B9 /* RELEditBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4081AC1C3CB000590B9 /* RELEditBookController.m */; };
+		659BF4161AC1C3CB000590B9 /* RELAddBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF40A1AC1C3CB000590B9 /* RELAddBookController.m */; };
+		659BF4171AC1C3CB000590B9 /* RELDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF40C1AC1C3CB000590B9 /* RELDataSource.m */; };
+		659BF4181AC1C3CB000590B9 /* RELFileUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF40E1AC1C3CB000590B9 /* RELFileUtilities.m */; };
+		659BF4191AC1C3CB000590B9 /* UIImage+RELAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4101AC1C3CB000590B9 /* UIImage+RELAdditions.m */; };
+		659BF41A1AC1C3CB000590B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4111AC1C3CB000590B9 /* Main.storyboard */; };
+		659BF4371AC1C3EE000590B9 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF41D1AC1C3EE000590B9 /* Author.m */; };
+		659BF4381AC1C3EE000590B9 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF41F1AC1C3EE000590B9 /* Book.m */; };
+		659BF4391AC1C3EE000590B9 /* BooksAndAuthors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4201AC1C3EE000590B9 /* BooksAndAuthors.plist */; };
+		659BF43A1AC1C3EE000590B9 /* Austen.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4221AC1C3EE000590B9 /* Austen.png */; };
+		659BF43B1AC1C3EE000590B9 /* Bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4231AC1C3EE000590B9 /* Bacon.png */; };
+		659BF43C1AC1C3EE000590B9 /* Carroll.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4241AC1C3EE000590B9 /* Carroll.png */; };
+		659BF43D1AC1C3EE000590B9 /* DefaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4251AC1C3EE000590B9 /* DefaultImage.png */; };
+		659BF43E1AC1C3EE000590B9 /* Dostoevsky.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4261AC1C3EE000590B9 /* Dostoevsky.png */; };
+		659BF43F1AC1C3EE000590B9 /* Eliot.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4271AC1C3EE000590B9 /* Eliot.png */; };
+		659BF4401AC1C3EE000590B9 /* Emerson.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4281AC1C3EE000590B9 /* Emerson.png */; };
+		659BF4411AC1C3EE000590B9 /* Hemingway.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4291AC1C3EE000590B9 /* Hemingway.png */; };
+		659BF4421AC1C3EE000590B9 /* Milne.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF42A1AC1C3EE000590B9 /* Milne.png */; };
+		659BF4431AC1C3EE000590B9 /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF42B1AC1C3EE000590B9 /* More.png */; };
+		659BF4441AC1C3EE000590B9 /* Newton.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF42C1AC1C3EE000590B9 /* Newton.png */; };
+		659BF4451AC1C3EE000590B9 /* Shakespeare.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF42D1AC1C3EE000590B9 /* Shakespeare.png */; };
+		659BF4461AC1C3EE000590B9 /* Thoreau.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 659BF42E1AC1C3EE000590B9 /* Thoreau.jpg */; };
+		659BF4471AC1C3EE000590B9 /* Tolstoy.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF42F1AC1C3EE000590B9 /* Tolstoy.png */; };
+		659BF4481AC1C3EE000590B9 /* Twain.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4301AC1C3EE000590B9 /* Twain.png */; };
+		659BF4491AC1C3EE000590B9 /* Wells.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4311AC1C3EE000590B9 /* Wells.png */; };
+		659BF44A1AC1C3EE000590B9 /* Whitman.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4321AC1C3EE000590B9 /* Whitman.png */; };
+		659BF44B1AC1C3EE000590B9 /* ModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4341AC1C3EE000590B9 /* ModelObject.m */; };
+		659BF44C1AC1C3EE000590B9 /* ReadingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4361AC1C3EE000590B9 /* ReadingList.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		659BF3F21AC1C380000590B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 659BF3D01AC1C380000590B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 659BF3D71AC1C380000590B9;
+			remoteInfo = "ReadingList-Advanced";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		659BF3D81AC1C380000590B9 /* ReadingList-Advanced.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReadingList-Advanced.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		659BF3DC1AC1C380000590B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659BF3DD1AC1C380000590B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		659BF3E81AC1C380000590B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		659BF3F11AC1C380000590B9 /* ReadingList-AdvancedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReadingList-AdvancedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		659BF3F61AC1C380000590B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659BF3F71AC1C380000590B9 /* ReadingList_AdvancedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadingList_AdvancedTests.m; sourceTree = "<group>"; };
+		659BF4011AC1C3CB000590B9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		659BF4021AC1C3CB000590B9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		659BF4031AC1C3CB000590B9 /* RELReadingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELReadingListController.h; sourceTree = "<group>"; };
+		659BF4041AC1C3CB000590B9 /* RELReadingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELReadingListController.m; sourceTree = "<group>"; };
+		659BF4051AC1C3CB000590B9 /* RELViewBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELViewBookController.h; sourceTree = "<group>"; };
+		659BF4061AC1C3CB000590B9 /* RELViewBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELViewBookController.m; sourceTree = "<group>"; };
+		659BF4071AC1C3CB000590B9 /* RELEditBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELEditBookController.h; sourceTree = "<group>"; };
+		659BF4081AC1C3CB000590B9 /* RELEditBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELEditBookController.m; sourceTree = "<group>"; };
+		659BF4091AC1C3CB000590B9 /* RELAddBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELAddBookController.h; sourceTree = "<group>"; };
+		659BF40A1AC1C3CB000590B9 /* RELAddBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELAddBookController.m; sourceTree = "<group>"; };
+		659BF40B1AC1C3CB000590B9 /* RELDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELDataSource.h; sourceTree = "<group>"; };
+		659BF40C1AC1C3CB000590B9 /* RELDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELDataSource.m; sourceTree = "<group>"; };
+		659BF40D1AC1C3CB000590B9 /* RELFileUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RELFileUtilities.h; sourceTree = "<group>"; };
+		659BF40E1AC1C3CB000590B9 /* RELFileUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RELFileUtilities.m; sourceTree = "<group>"; };
+		659BF40F1AC1C3CB000590B9 /* UIImage+RELAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RELAdditions.h"; sourceTree = "<group>"; };
+		659BF4101AC1C3CB000590B9 /* UIImage+RELAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RELAdditions.m"; sourceTree = "<group>"; };
+		659BF4111AC1C3CB000590B9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		659BF41C1AC1C3EE000590B9 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Author.h; sourceTree = "<group>"; };
+		659BF41D1AC1C3EE000590B9 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Author.m; sourceTree = "<group>"; };
+		659BF41E1AC1C3EE000590B9 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		659BF41F1AC1C3EE000590B9 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		659BF4201AC1C3EE000590B9 /* BooksAndAuthors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = BooksAndAuthors.plist; sourceTree = "<group>"; };
+		659BF4221AC1C3EE000590B9 /* Austen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Austen.png; sourceTree = "<group>"; };
+		659BF4231AC1C3EE000590B9 /* Bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bacon.png; sourceTree = "<group>"; };
+		659BF4241AC1C3EE000590B9 /* Carroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Carroll.png; sourceTree = "<group>"; };
+		659BF4251AC1C3EE000590B9 /* DefaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultImage.png; sourceTree = "<group>"; };
+		659BF4261AC1C3EE000590B9 /* Dostoevsky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dostoevsky.png; sourceTree = "<group>"; };
+		659BF4271AC1C3EE000590B9 /* Eliot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eliot.png; sourceTree = "<group>"; };
+		659BF4281AC1C3EE000590B9 /* Emerson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Emerson.png; sourceTree = "<group>"; };
+		659BF4291AC1C3EE000590B9 /* Hemingway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hemingway.png; sourceTree = "<group>"; };
+		659BF42A1AC1C3EE000590B9 /* Milne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Milne.png; sourceTree = "<group>"; };
+		659BF42B1AC1C3EE000590B9 /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
+		659BF42C1AC1C3EE000590B9 /* Newton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Newton.png; sourceTree = "<group>"; };
+		659BF42D1AC1C3EE000590B9 /* Shakespeare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shakespeare.png; sourceTree = "<group>"; };
+		659BF42E1AC1C3EE000590B9 /* Thoreau.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thoreau.jpg; sourceTree = "<group>"; };
+		659BF42F1AC1C3EE000590B9 /* Tolstoy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tolstoy.png; sourceTree = "<group>"; };
+		659BF4301AC1C3EE000590B9 /* Twain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twain.png; sourceTree = "<group>"; };
+		659BF4311AC1C3EE000590B9 /* Wells.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wells.png; sourceTree = "<group>"; };
+		659BF4321AC1C3EE000590B9 /* Whitman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Whitman.png; sourceTree = "<group>"; };
+		659BF4331AC1C3EE000590B9 /* ModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelObject.h; sourceTree = "<group>"; };
+		659BF4341AC1C3EE000590B9 /* ModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelObject.m; sourceTree = "<group>"; };
+		659BF4351AC1C3EE000590B9 /* ReadingList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingList.h; sourceTree = "<group>"; };
+		659BF4361AC1C3EE000590B9 /* ReadingList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingList.m; sourceTree = "<group>"; };
+		659BF44D1AC1C41B000590B9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		659BF3D51AC1C380000590B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659BF3EE1AC1C380000590B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		659BF3CF1AC1C380000590B9 = {
+			isa = PBXGroup;
+			children = (
+				659BF44D1AC1C41B000590B9 /* README.md */,
+				659BF41B1AC1C3EE000590B9 /* ReadingListModel */,
+				659BF3DA1AC1C380000590B9 /* ReadingList-Advanced */,
+				659BF3F41AC1C380000590B9 /* ReadingList-AdvancedTests */,
+				659BF3D91AC1C380000590B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		659BF3D91AC1C380000590B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				659BF3D81AC1C380000590B9 /* ReadingList-Advanced.app */,
+				659BF3F11AC1C380000590B9 /* ReadingList-AdvancedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		659BF3DA1AC1C380000590B9 /* ReadingList-Advanced */ = {
+			isa = PBXGroup;
+			children = (
+				659BF4011AC1C3CB000590B9 /* AppDelegate.h */,
+				659BF4021AC1C3CB000590B9 /* AppDelegate.m */,
+				659BF4031AC1C3CB000590B9 /* RELReadingListController.h */,
+				659BF4041AC1C3CB000590B9 /* RELReadingListController.m */,
+				659BF4051AC1C3CB000590B9 /* RELViewBookController.h */,
+				659BF4061AC1C3CB000590B9 /* RELViewBookController.m */,
+				659BF4071AC1C3CB000590B9 /* RELEditBookController.h */,
+				659BF4081AC1C3CB000590B9 /* RELEditBookController.m */,
+				659BF4091AC1C3CB000590B9 /* RELAddBookController.h */,
+				659BF40A1AC1C3CB000590B9 /* RELAddBookController.m */,
+				659BF40B1AC1C3CB000590B9 /* RELDataSource.h */,
+				659BF40C1AC1C3CB000590B9 /* RELDataSource.m */,
+				659BF40D1AC1C3CB000590B9 /* RELFileUtilities.h */,
+				659BF40E1AC1C3CB000590B9 /* RELFileUtilities.m */,
+				659BF40F1AC1C3CB000590B9 /* UIImage+RELAdditions.h */,
+				659BF4101AC1C3CB000590B9 /* UIImage+RELAdditions.m */,
+				659BF4111AC1C3CB000590B9 /* Main.storyboard */,
+				659BF3E81AC1C380000590B9 /* Images.xcassets */,
+				659BF3DB1AC1C380000590B9 /* Supporting Files */,
+			);
+			path = "ReadingList-Advanced";
+			sourceTree = "<group>";
+		};
+		659BF3DB1AC1C380000590B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				659BF3DC1AC1C380000590B9 /* Info.plist */,
+				659BF3DD1AC1C380000590B9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		659BF3F41AC1C380000590B9 /* ReadingList-AdvancedTests */ = {
+			isa = PBXGroup;
+			children = (
+				659BF3F71AC1C380000590B9 /* ReadingList_AdvancedTests.m */,
+				659BF3F51AC1C380000590B9 /* Supporting Files */,
+			);
+			path = "ReadingList-AdvancedTests";
+			sourceTree = "<group>";
+		};
+		659BF3F51AC1C380000590B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				659BF3F61AC1C380000590B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		659BF41B1AC1C3EE000590B9 /* ReadingListModel */ = {
+			isa = PBXGroup;
+			children = (
+				659BF41C1AC1C3EE000590B9 /* Author.h */,
+				659BF41D1AC1C3EE000590B9 /* Author.m */,
+				659BF41E1AC1C3EE000590B9 /* Book.h */,
+				659BF41F1AC1C3EE000590B9 /* Book.m */,
+				659BF4201AC1C3EE000590B9 /* BooksAndAuthors.plist */,
+				659BF4211AC1C3EE000590B9 /* Images */,
+				659BF4331AC1C3EE000590B9 /* ModelObject.h */,
+				659BF4341AC1C3EE000590B9 /* ModelObject.m */,
+				659BF4351AC1C3EE000590B9 /* ReadingList.h */,
+				659BF4361AC1C3EE000590B9 /* ReadingList.m */,
+			);
+			path = ReadingListModel;
+			sourceTree = "<group>";
+		};
+		659BF4211AC1C3EE000590B9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				659BF4221AC1C3EE000590B9 /* Austen.png */,
+				659BF4231AC1C3EE000590B9 /* Bacon.png */,
+				659BF4241AC1C3EE000590B9 /* Carroll.png */,
+				659BF4251AC1C3EE000590B9 /* DefaultImage.png */,
+				659BF4261AC1C3EE000590B9 /* Dostoevsky.png */,
+				659BF4271AC1C3EE000590B9 /* Eliot.png */,
+				659BF4281AC1C3EE000590B9 /* Emerson.png */,
+				659BF4291AC1C3EE000590B9 /* Hemingway.png */,
+				659BF42A1AC1C3EE000590B9 /* Milne.png */,
+				659BF42B1AC1C3EE000590B9 /* More.png */,
+				659BF42C1AC1C3EE000590B9 /* Newton.png */,
+				659BF42D1AC1C3EE000590B9 /* Shakespeare.png */,
+				659BF42E1AC1C3EE000590B9 /* Thoreau.jpg */,
+				659BF42F1AC1C3EE000590B9 /* Tolstoy.png */,
+				659BF4301AC1C3EE000590B9 /* Twain.png */,
+				659BF4311AC1C3EE000590B9 /* Wells.png */,
+				659BF4321AC1C3EE000590B9 /* Whitman.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		659BF3D71AC1C380000590B9 /* ReadingList-Advanced */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659BF3FB1AC1C380000590B9 /* Build configuration list for PBXNativeTarget "ReadingList-Advanced" */;
+			buildPhases = (
+				659BF3D41AC1C380000590B9 /* Sources */,
+				659BF3D51AC1C380000590B9 /* Frameworks */,
+				659BF3D61AC1C380000590B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReadingList-Advanced";
+			productName = "ReadingList-Advanced";
+			productReference = 659BF3D81AC1C380000590B9 /* ReadingList-Advanced.app */;
+			productType = "com.apple.product-type.application";
+		};
+		659BF3F01AC1C380000590B9 /* ReadingList-AdvancedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 659BF3FE1AC1C380000590B9 /* Build configuration list for PBXNativeTarget "ReadingList-AdvancedTests" */;
+			buildPhases = (
+				659BF3ED1AC1C380000590B9 /* Sources */,
+				659BF3EE1AC1C380000590B9 /* Frameworks */,
+				659BF3EF1AC1C380000590B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				659BF3F31AC1C380000590B9 /* PBXTargetDependency */,
+			);
+			name = "ReadingList-AdvancedTests";
+			productName = "ReadingList-AdvancedTests";
+			productReference = 659BF3F11AC1C380000590B9 /* ReadingList-AdvancedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		659BF3D01AC1C380000590B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "About Objects";
+				TargetAttributes = {
+					659BF3D71AC1C380000590B9 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					659BF3F01AC1C380000590B9 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 659BF3D71AC1C380000590B9;
+					};
+				};
+			};
+			buildConfigurationList = 659BF3D31AC1C380000590B9 /* Build configuration list for PBXProject "ReadingList-Advanced" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 659BF3CF1AC1C380000590B9;
+			productRefGroup = 659BF3D91AC1C380000590B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				659BF3D71AC1C380000590B9 /* ReadingList-Advanced */,
+				659BF3F01AC1C380000590B9 /* ReadingList-AdvancedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		659BF3D61AC1C380000590B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659BF4391AC1C3EE000590B9 /* BooksAndAuthors.plist in Resources */,
+				659BF43D1AC1C3EE000590B9 /* DefaultImage.png in Resources */,
+				659BF44A1AC1C3EE000590B9 /* Whitman.png in Resources */,
+				659BF4491AC1C3EE000590B9 /* Wells.png in Resources */,
+				659BF4461AC1C3EE000590B9 /* Thoreau.jpg in Resources */,
+				659BF4441AC1C3EE000590B9 /* Newton.png in Resources */,
+				659BF43C1AC1C3EE000590B9 /* Carroll.png in Resources */,
+				659BF4451AC1C3EE000590B9 /* Shakespeare.png in Resources */,
+				659BF4411AC1C3EE000590B9 /* Hemingway.png in Resources */,
+				659BF43F1AC1C3EE000590B9 /* Eliot.png in Resources */,
+				659BF43B1AC1C3EE000590B9 /* Bacon.png in Resources */,
+				659BF43E1AC1C3EE000590B9 /* Dostoevsky.png in Resources */,
+				659BF43A1AC1C3EE000590B9 /* Austen.png in Resources */,
+				659BF4431AC1C3EE000590B9 /* More.png in Resources */,
+				659BF3E91AC1C380000590B9 /* Images.xcassets in Resources */,
+				659BF4421AC1C3EE000590B9 /* Milne.png in Resources */,
+				659BF4471AC1C3EE000590B9 /* Tolstoy.png in Resources */,
+				659BF4481AC1C3EE000590B9 /* Twain.png in Resources */,
+				659BF41A1AC1C3CB000590B9 /* Main.storyboard in Resources */,
+				659BF4401AC1C3EE000590B9 /* Emerson.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659BF3EF1AC1C380000590B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		659BF3D41AC1C380000590B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659BF44C1AC1C3EE000590B9 /* ReadingList.m in Sources */,
+				659BF44B1AC1C3EE000590B9 /* ModelObject.m in Sources */,
+				659BF4161AC1C3CB000590B9 /* RELAddBookController.m in Sources */,
+				659BF4121AC1C3CB000590B9 /* AppDelegate.m in Sources */,
+				659BF4131AC1C3CB000590B9 /* RELReadingListController.m in Sources */,
+				659BF3DE1AC1C380000590B9 /* main.m in Sources */,
+				659BF4381AC1C3EE000590B9 /* Book.m in Sources */,
+				659BF4371AC1C3EE000590B9 /* Author.m in Sources */,
+				659BF4181AC1C3CB000590B9 /* RELFileUtilities.m in Sources */,
+				659BF4141AC1C3CB000590B9 /* RELViewBookController.m in Sources */,
+				659BF4171AC1C3CB000590B9 /* RELDataSource.m in Sources */,
+				659BF4151AC1C3CB000590B9 /* RELEditBookController.m in Sources */,
+				659BF4191AC1C3CB000590B9 /* UIImage+RELAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		659BF3ED1AC1C380000590B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659BF3F81AC1C380000590B9 /* ReadingList_AdvancedTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		659BF3F31AC1C380000590B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 659BF3D71AC1C380000590B9 /* ReadingList-Advanced */;
+			targetProxy = 659BF3F21AC1C380000590B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		659BF3F91AC1C380000590B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		659BF3FA1AC1C380000590B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		659BF3FC1AC1C380000590B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ReadingList-Advanced/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		659BF3FD1AC1C380000590B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ReadingList-Advanced/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		659BF3FF1AC1C380000590B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ReadingList-AdvancedTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadingList-Advanced.app/ReadingList-Advanced";
+			};
+			name = Debug;
+		};
+		659BF4001AC1C380000590B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ReadingList-AdvancedTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadingList-Advanced.app/ReadingList-Advanced";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		659BF3D31AC1C380000590B9 /* Build configuration list for PBXProject "ReadingList-Advanced" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659BF3F91AC1C380000590B9 /* Debug */,
+				659BF3FA1AC1C380000590B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		659BF3FB1AC1C380000590B9 /* Build configuration list for PBXNativeTarget "ReadingList-Advanced" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659BF3FC1AC1C380000590B9 /* Debug */,
+				659BF3FD1AC1C380000590B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		659BF3FE1AC1C380000590B9 /* Build configuration list for PBXNativeTarget "ReadingList-AdvancedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659BF3FF1AC1C380000590B9 /* Debug */,
+				659BF4001AC1C380000590B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 659BF3D01AC1C380000590B9 /* Project object */;
+}
