@@ -1,0 +1,53 @@
+#import "RELEditBookController.h"
+#import "Book.h"
+#import "Author.h"
+
+@interface RELEditBookController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *titleField;
+@property (weak, nonatomic) IBOutlet UITextField *yearField;
+@property (weak, nonatomic) IBOutlet UITextField *firstNameField;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameField;
+
+@end
+
+
+@implementation RELEditBookController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.titleField.text = self.book.title;
+    self.yearField.text = self.book.year;
+    self.firstNameField.text = self.book.author.firstName;
+    self.lastNameField.text = self.book.author.lastName;
+    
+    [self.titleField becomeFirstResponder];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)updateBook
+{
+    self.book.title = self.titleField.text;
+    self.book.year = self.yearField.text;
+    self.book.author.firstName = self.firstNameField.text;
+    self.book.author.lastName = self.lastNameField.text;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // NOTE: Assumes the segue identifier for the Done button
+    // is set to "DoneEditing" in the storyboard.
+    //
+    if ([segue.identifier isEqualToString:@"DoneEditing"])
+    {
+        [self updateBook];
+    }
+}
+
+@end
