@@ -40,6 +40,7 @@
 		659BF4CC1AC1D4C5000590B9 /* Whitman.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BF4B41AC1D4C5000590B9 /* Whitman.png */; };
 		659BF4CD1AC1D4C5000590B9 /* ModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4B61AC1D4C5000590B9 /* ModelObject.m */; };
 		659BF4CE1AC1D4C5000590B9 /* ReadingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4B81AC1D4C5000590B9 /* ReadingList.m */; };
+		659BF4D11AC1DA57000590B9 /* RELReadingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659BF4861AC1D4A4000590B9 /* RELReadingListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659BF4D11AC1DA57000590B9 /* RELReadingListController.m in Sources */,
 				659BF47A1AC1D484000590B9 /* ReadingListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
