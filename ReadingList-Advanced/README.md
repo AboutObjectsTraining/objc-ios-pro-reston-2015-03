@@ -23,7 +23,7 @@ The data source is already configured in the storyboard for the project, but her
 
 1. Drag the **Object** icon from IB's **Object Library** into the Reading List scene, either in the sidebar, or directly in the dock. 
 
-  ![Data source icon in IB](/DataSourceInIB.png)
+  ![Data source icon in IB](/ReadingList-Advanced/DataSourceInIB.png)
 
 2. Set the object's class to `RELDataSource` in the **Identity Inspector**.
 
