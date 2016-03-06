@@ -6,4 +6,6 @@
 
 @property (readonly, nonatomic) Book *book;
 
+@property (strong, nonatomic) void (^completion)(Book *newBook);
+
 @end

@@ -16,22 +16,19 @@
 
 @implementation RELAddBookController
 
-- (void)createBook
+- (NSDictionary *)bookDictionary
 {
-    self.book = [[Book alloc] init];
-    self.book.title = self.titleField.text;
-    self.book.year = self.yearField.text;
-    
-    self.book.author = [[Author alloc] init];
-    self.book.author.firstName = self.firstNameField.text;
-    self.book.author.lastName = self.lastNameField.text;
+    return @{ @"title" : self.titleField.text,
+              @"year"  : self.yearField.text,
+              @"author": @{ @"firstName": self.firstNameField.text,
+                            @"lastName" : self.lastNameField.text }};
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier hasPrefix:@"Done"])
     {
-        [self createBook];
+        self.completion([Book modelObjectWithDictionary:self.bookDictionary]);
     }
 }
 

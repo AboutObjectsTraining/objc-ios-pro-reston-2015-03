@@ -57,7 +57,6 @@
 - (Book *)selectedBook
 {
     NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
-    
     return self.books[indexPath.row];
 }
 
